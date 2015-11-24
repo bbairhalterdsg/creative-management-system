@@ -1,0 +1,33 @@
+extends ./layout
+block content
+  form(name="assetSubmit")
+
+    div.input-wrap
+      label Name:
+      input(type="text" value="#{_id}" name="assetName")
+
+    div.input-wrap
+      label Link:
+      input(type="text" name="assetLink")
+
+    div.input-wrap
+      label Alt Tag:
+      input(type="text" name="assetAlt")
+
+    div.input-wrap
+      label Omniture Tag:
+      input(type="text" name="assetTag")
+
+    div.input-wrap
+      label File:
+      input(type="file" name="assetFile")
+
+    div.input-wrap
+      label Start Date:
+      input(type="datetime-local" name="startDate")
+
+    div.input-wrap
+      label End Date:
+      input(type="datetime-local" name="endDate")
+
+    input.submit-btn.disabled(type="submit")

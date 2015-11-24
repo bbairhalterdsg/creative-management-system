@@ -6,3 +6,33 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* FORM STYLES */
+input {
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  margin:5px;
+  padding:5px;
+  width:300px;
+}
+
+input:focus {
+  outline:none;
+  -webkit-box-shadow: 0 0 5px 0 rgba(25,25,25,1);
+  box-shadow: 0 0 5px 0 rgba(25,25,25,1);
+}
+
+input[type="text"] {
+
+}
+
+.submit-btn {
+  cursor:pointer;
+  width:100px;
+}
+
+.submit-btn.disabled:hover {
+  background:#E02424;
+  color:white;
+  cursor:default;
+}

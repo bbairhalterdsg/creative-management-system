@@ -7,6 +7,11 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var assets = require('./routes/assets');
+var pages = require('./routes/pages');
+
+var redis = require('./cust_modules/redis');
+//redis.mod.client.set('testVal', 4);
 
 var app = express();
 
@@ -24,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/assets', assets);
+app.use('/pages', pages);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
